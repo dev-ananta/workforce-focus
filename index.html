@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Work Productivity — Meeting Planner & Time Blocker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Work Productivity</h1>
+    <nav>
+      <button id="nav-schedule" class="nav-btn" aria-pressed="false">Schedule</button>
+      <button id="nav-priority" class="nav-btn" aria-pressed="false">Priority Matrix</button>
+      <button id="nav-meetings" class="nav-btn" aria-pressed="false">Meeting Notes</button>
+      <button id="export-btn" class="nav-btn">Export</button>
+    </nav>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section id="schedule-view" class="view" aria-hidden="false">
+      <h2>Time Blocking</h2>
+      <div id="time-blocking"></div>
+    </section>
+
+    <section id="priority-view" class="view" aria-hidden="true" hidden>
+      <h2>Priority Matrix — Eisenhower</h2>
+      <div id="priority-matrix" class="matrix" aria-label="Eisenhower priority matrix"></div>
+    </section>
+
+    <section id="meeting-view" class="view" aria-hidden="true" hidden>
+      <h2>Meeting Notes</h2>
+      <form id="meeting-form" class="meeting-form" aria-label="Add meeting note">
+        <input id="meeting-title" placeholder="Meeting title" required />
+        <input id="meeting-tags" placeholder="Tags (comma separated)" />
+        <textarea id="meeting-body" placeholder="Notes..." rows="5" required></textarea>
+        <div class="form-actions">
+          <button type="submit">Save Note</button>
+        </div>
+      </form>
+
+      <div id="meeting-list" class="meeting-list" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>Made for productivity. Store is local to your browser. Deploy on GitHub Pages.</small>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
