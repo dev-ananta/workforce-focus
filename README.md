@@ -41,8 +41,6 @@ Timeline
 
 <details>
     <summary><b>Click to expand!</b></summary>
-    Summary
-
     This is a clean, focused single-page client-side productivity app. The code is modular and easy to follow: `app.js` wires three small feature modules (`PriorityMatrix`, `TimeBlocking`, `MeetingNotes`) and util classes (`Storage`, `Analytics`, `Exporter`). Overall design favors simplicity and local-first behavior (localStorage) — a great fit for a lightweight tool.
 
     Index & Styles
