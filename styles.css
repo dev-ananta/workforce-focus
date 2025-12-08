@@ -37,11 +37,51 @@ nav{display:flex;gap:8px}
 .note{padding:10px;border-radius:8px;background:var(--card);border:1px solid rgba(255,255,255,0.02)}
 .form-actions{display:flex;gap:8px}
 
-#time-blocking{display:flex;flex-direction:column;gap:6px;max-height:640px;overflow:auto;padding-right:6px}
-.hour-row{display:flex;gap:8px;align-items:center;padding:6px;border-radius:8px;background:rgba(255,255,255,0.01);border:1px solid rgba(255,255,255,0.01)}
-.hour-label{width:70px;font-size:13px;color:var(--muted);text-align:right}
-.hour-actions{flex:1;display:flex;gap:8px;align-items:center}
-.block{padding:6px 8px;border-radius:6px;background:linear-gradient(90deg, rgba(56,189,248,0.08), rgba(255,255,255,0.02));border:1px solid rgba(56,189,248,0.12);display:inline-flex;gap:8px;align-items:center}
+/*Commit 8*/
+#time-blocking {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 100%;
+  overflow-x: auto;
+}
+
+.day-column {
+  border-right: 1px solid #ddd;
+  min-width: 200px;  /* MODIFY width per day */
+}
+
+.day-title {
+  font-weight: bold;
+  padding: 8px;
+  border-bottom: 2px solid #ccc;
+}
+
+.hour-row {
+  display: flex;
+  height: 60px;      /* MODIFY height per hour */
+  border-bottom: 1px solid #eee;
+  padding: 4px;
+}
+
+.hour-label {
+  width: 60px;       /* MODIFY label width */
+  flex-shrink: 0;
+}
+
+.hour-actions {
+  flex-grow: 1;
+}
+
+.block {
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, rgba(56,189,248,0.08), rgba(255,255,255,0.02));
+  border: 1px solid rgba(56,189,248,0.12);
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
 
 .app-footer{padding:12px 20px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,0.02)}
 @media (min-width:900px){
