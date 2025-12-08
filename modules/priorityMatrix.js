@@ -1,5 +1,3 @@
-// Eisenhower matrix (Urgent/Not Urgent, Important/Not Important)
-
 // modules/priorityMatrix.js
 import Storage from '../utils/storage.js';
 
@@ -9,10 +7,10 @@ export default class PriorityMatrix {
     this.key = 'priority-matrix';
     this.container = document.getElementById('priority-matrix');
     this.quads = [
-      {id:'urgent-important', title:'Urgent & Important'},
-      {id:'noturgent-important', title:'Not Urgent, Important'},
-      {id:'urgent-notimportant', title:'Urgent, Not Important'},
-      {id:'noturgent-notimportant', title:'Not Urgent, Not Important'}
+      {id:'necessary', title:'Necessary'},
+      {id:'important', title:'Important'},
+      {id:'unimportant', title:'Unimportant'},
+      {id:'unnecessary', title:'Unnecessary'}
     ];
     this.state = this.storage.get(this.key) || {tasks: []};
     this._render();
