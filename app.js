@@ -4,7 +4,7 @@
 import Storage from './utils/storage.js';
 import Exporter from './utils/exportPDF.js';
 import Analytics from './utils/analytics.js';
-import PriorityMatrix from './modules/priorityMatrix.js';
+import PriorityManagementTable from './modules/priorityMatrix.js';
 import TimeBlocking from './modules/timeBlocking.js';
 import MeetingNotes from './modules/meetingNotes.js';
 
@@ -13,7 +13,7 @@ const storage = new Storage('work-prod-v1');
 const analytics = new Analytics(storage);
 const exporter = new Exporter();
 
-const priority = new PriorityMatrix({storage});
+const priority = new PriorityManagementTable({storage});
 const timeBlock = new TimeBlocking({storage});
 const meetings = new MeetingNotes({storage});
 
